@@ -55,7 +55,7 @@ export default {
           reader.onload = () => {
             let data = new Uint8Array(reader.result)
             this.fileXl = XLSX.read(data, {type: 'array'});
-            let url = "http://193.243.158.230:4500/api/import";
+            let url = "https://193.243.158.230:4500/api/import";
             let req = new XMLHttpRequest();
             req.open("POST", url, true);
             req.setRequestHeader('Authorization', 'test-task');
